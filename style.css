@@ -312,3 +312,15 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .statement .lede > .type-char{color:#f4f3ee}
 .statement .lede .type-char{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
 .statement .lede .weight-accent .type-char{font-weight:inherit}
+
+/* Experimental pinned hero-to-video masking sequence. */
+.hero-video-experiment.motion-stage{height:370vh;position:relative;background:var(--bg)}
+.hero-video-experiment .motion-pin{height:100svh;position:sticky;top:0;isolation:isolate;overflow:hidden}
+.hero-video-experiment .motion-frame{position:absolute;inset:auto;z-index:1;flex:none;pointer-events:none}
+.hero-video-experiment .hero-overlay{position:absolute;inset:0;z-index:3;display:flex;align-items:stretch;pointer-events:auto;will-change:transform,opacity;mix-blend-mode:difference;color:#f4f3ee}
+.hero-video-experiment .hero-overlay .home-intro{width:100%;min-height:100svh;margin:0}
+.hero-video-experiment .hero-overlay .hero-summary,.hero-video-experiment .hero-overlay .eyebrow,.hero-video-experiment .hero-overlay .hero-scroll-cue{color:inherit}
+.hero-video-experiment .motion-frame .motion-caption{pointer-events:none}
+.hero-video-experiment .motion-frame{will-change:width,height,opacity}
+@media(max-width:800px){.hero-video-experiment.motion-stage{height:340vh}.hero-video-experiment .hero-overlay .home-intro{min-height:100svh}}
+@media(prefers-reduced-motion:reduce){.hero-video-experiment.motion-stage{height:auto}.hero-video-experiment .motion-pin{position:relative;height:100svh}.hero-video-experiment .hero-overlay{mix-blend-mode:normal;color:var(--ink)}.hero-video-experiment .motion-frame{opacity:0!important}}
