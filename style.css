@@ -522,3 +522,55 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
  background-color:var(--work-gallery-bg,var(--bg));
  pointer-events:none;
 }
+
+/* The Brook on Janes — editorial case study and CSS-built visual mockups */
+.brook-intro .display{font-weight:300}.brook-intro .display .weight-accent{font-weight:700}
+.brook-meta{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:65px;text-transform:uppercase;font-size:11px;letter-spacing:.12em}
+.brook-visual{padding:clamp(50px,7vw,110px) max(20px,6vw);overflow:hidden}
+.brook-navy{background:#10233b;color:#fff}
+.brook-paper{background:#f0eee9}
+.brook-showcase{background-color:#10233b;background-image:repeating-radial-gradient(ellipse at 20% 30%,transparent 0 8px,#ffffff09 9px 10px,transparent 11px 23px);padding-bottom:50px}
+.brook-device{max-width:1100px;margin:auto;box-shadow:0 40px 100px #0006}
+.brook-browser{display:flex;justify-content:space-between;background:#fff;color:#17243b;padding:17px 26px;font-size:9px;letter-spacing:.18em}
+.brook-screen{min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 25px;background:#10233b;background-image:repeating-radial-gradient(ellipse at 35% 25%,transparent 0 11px,#ffffff0c 12px 13px,transparent 14px 30px);color:#fff}
+.brook-roundel{width:132px;height:132px;border:5px double #fff;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f8f7f3;color:#14253d;font-size:16px;font-weight:800;letter-spacing:-.06em;margin-bottom:45px}
+.brook-roundel small{font-size:9px;letter-spacing:0}
+.brook-screen-title{font-size:clamp(20px,3vw,36px);line-height:1.12;font-weight:700;letter-spacing:-.035em}
+.brook-screen-detail{font-size:10px;letter-spacing:.28em;margin-top:25px}
+.brook-down{font-size:35px;font-weight:200;margin-top:32px}
+.brook-screen-strip{display:grid;grid-template-columns:1fr 1fr;min-height:290px}
+.brook-photo-swatch{background:linear-gradient(135deg,#bac5c4,#738e98 46%,#f0b4a3 47%,#e4d5bd)}
+.brook-red-panel{background:#a50030;color:white;padding:clamp(28px,5vw,80px);display:flex;flex-direction:column;justify-content:center;background-image:repeating-radial-gradient(ellipse at 80% 20%,transparent 0 17px,#ffffff0b 18px 19px,transparent 20px 36px)}
+.brook-red-panel small,.brook-light-panel small{font-size:10px;letter-spacing:.26em}
+.brook-red-panel h3,.brook-light-panel h3{font-size:clamp(22px,3vw,44px);line-height:1.1;margin:30px 0;font-weight:750;letter-spacing:-.045em}
+.brook-red-panel p,.brook-light-panel p{font-size:13px;line-height:1.7;max-width:350px}
+.brook-red-panel>span,.brook-light-panel>span{font-size:10px;letter-spacing:.23em;margin-top:25px}
+.brook-visual-caption{font-size:11px;letter-spacing:.1em;text-align:center;opacity:.7;margin:32px auto 0;max-width:800px}
+.brook-split-visual{display:grid;grid-template-columns:1fr 1fr;max-width:1250px;min-height:550px;margin:auto}
+.brook-photo-art{min-height:450px;display:flex;align-items:flex-end;padding:45px;font-size:clamp(26px,4vw,58px);font-weight:700;line-height:1.02;letter-spacing:-.05em;color:#fff}
+.brook-photo-art-a{background:linear-gradient(135deg,#26394d88,#0008),linear-gradient(35deg,#6d9290 0 32%,#e6b0a1 32% 52%,#5a7184 52% 70%,#d3b48c 70%)}
+.brook-mobile-showcase{background:#141414;color:white;padding-top:100px}
+.brook-mobile-grid{display:flex;gap:clamp(20px,5vw,85px);justify-content:center;align-items:center}
+.brook-phone{width:min(36vw,330px);aspect-ratio: .48;border:9px solid #353535;border-radius:42px;background:#fff;overflow:hidden;box-shadow:0 0 0 2px #777,0 35px 60px #0009;color:#10233b;display:flex;flex-direction:column}
+.brook-phone-top{height:75px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:white;font-size:14px}
+.brook-phone-top b{line-height:.9;letter-spacing:-.05em}.brook-phone-top b small{display:block;font-size:7px;text-align:center;margin-top:5px}
+.brook-phone-content{flex:1;padding:clamp(18px,3vw,35px)!important;text-align:center;align-items:center}
+.brook-phone-content h3{font-size:clamp(17px,2.4vw,30px)}
+.brook-phone-content p{font-size:12px}
+.brook-light-panel{background:#f5f4f0;color:#10233b;display:flex;flex-direction:column;justify-content:center}
+.brook-phone-photo{height:24%;flex:none}
+.brook-photo-art-b{background:linear-gradient(30deg,#5b665b,#b49d82 50%,#d9b2a4)}
+.brook-photo-art-c{background:linear-gradient(145deg,#dfd8c8,#c5b7a8 35%,#8d999b 36% 55%,#e7d1c3 56%)}
+.brook-swatches{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px}
+.brook-swatches>div{height:180px;padding:20px;display:flex;align-items:flex-end;font-size:12px;color:white;letter-spacing:.07em}
+.brook-detail{min-height:570px;display:grid;place-items:center;text-align:center;background-image:repeating-radial-gradient(ellipse at 45% 60%,transparent 0 18px,#ffffff0a 19px 20px,transparent 21px 42px)}
+.brook-detail-copy small{letter-spacing:.25em;font-size:11px}
+.brook-detail-copy h2{font-size:clamp(52px,9vw,150px);letter-spacing:-.085em;line-height:.95;margin:40px 0}
+.brook-detail-copy em{font-style:normal;color:#e7b6c6}
+.brook-detail-copy p{font-size:16px;line-height:1.6}
+.brook-narrative .pill{margin-top:65px}
+.brook-card-visual{background:#10233b;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white!important;text-align:center;gap:18px;padding:25px;background-image:repeating-radial-gradient(ellipse at 40% 40%,transparent 0 12px,#ffffff0c 13px 14px,transparent 15px 29px)}
+.brook-card-visual .brook-card-roundel{width:105px;height:105px;border:4px double #fff;border-radius:50%;background:#f7f6f3;color:#14253d;display:flex;flex-direction:column;justify-content:center;font-size:13px;font-weight:800;line-height:1}
+.brook-card-roundel small{font-size:8px;font-weight:500;margin-top:5px}
+.brook-card-visual>span{font-size:clamp(13px,2vw,25px);line-height:1.15;font-weight:700;letter-spacing:-.03em}
+@media(max-width:800px){.brook-screen{min-height:350px}.brook-screen-strip,.brook-split-visual{grid-template-columns:1fr}.brook-screen-strip .brook-photo-swatch{min-height:170px}.brook-red-panel{min-height:300px}.brook-photo-art{min-height:320px}.brook-phone{width:43vw;border-width:6px;border-radius:25px}.brook-phone-top{height:50px;padding:10px;font-size:10px}.brook-phone-content p{font-size:10px}.brook-phone-content h3{margin:12px 0}.brook-phone-content>span{margin-top:10px;font-size:8px}.brook-visual{padding-left:20px;padding-right:20px}.brook-swatches>div{height:120px;padding:10px;font-size:10px}.brook-meta{gap:12px}.brook-detail{min-height:420px}}
