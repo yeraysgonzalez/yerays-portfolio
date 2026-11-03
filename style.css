@@ -51,3 +51,22 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .tile.parallax-card{--float-y:0px;transform:translate3d(0,var(--float-y),0);will-change:transform}
 @media(max-width:800px){.tile.parallax-card{transform:none!important}}
 @media(prefers-reduced-motion:reduce){.tile.parallax-card{transform:none!important}}
+
+/* Full-screen editorial sections and unified CTAs */
+.home-intro{min-height:calc(100svh - 84px);display:flex;flex-direction:column;justify-content:center;padding:50px 0 65px;box-sizing:border-box}
+.home-intro .display{margin:30px 0 40px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.intro-panel{background:var(--accent);color:var(--ink);padding:clamp(90px,12vw,190px) 0}
+.intro-panel p{max-width:1100px;font-size:clamp(34px,5.5vw,86px);letter-spacing:-.065em;line-height:1.06;font-weight:500;margin:50px 0 0}
+.footer{min-height:100svh;box-sizing:border-box;display:flex;flex-direction:column;justify-content:stretch}
+.footer>.container{flex:1;display:flex;flex-direction:column;width:100%}
+.footer h2{flex:1;display:flex;align-items:center;margin:clamp(50px,7vh,110px) 0;line-height:.96}
+.footer h2 .footer-cta{display:block;color:inherit;text-decoration:none!important;border:0!important;box-shadow:none!important;transition:color .38s ease}
+.footer h2 .footer-cta:hover,.footer h2 .footer-cta:focus-visible{color:var(--accent)!important;border:0!important;text-decoration:none!important}
+.footer-bottom{margin-top:auto}
+.filters{margin-bottom:clamp(135px,14vw,230px)}
+.home-intro~.section .section-line{margin-bottom:110px}
+.feature-grid{padding-top:clamp(70px,9vw,145px)}
+.section .pill,.hero-actions .pill,.page-head .pill{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.section .pill:hover,.hero-actions .pill:hover,.page-head .pill:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+@media(max-width:800px){.home-intro{min-height:calc(100svh - 70px)}.intro-panel{padding:85px 0}.footer{min-height:100svh}.footer h2{font-size:clamp(52px,12vw,100px)}.filters{margin-bottom:90px}.feature-grid{padding-top:65px}}
