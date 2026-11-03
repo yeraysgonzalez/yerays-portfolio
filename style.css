@@ -479,3 +479,28 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
 @media(max-width:800px){
  body>.container:first-child.nav-scrolled .nav{background:rgba(217,246,110,.85)}
 }
+
+/* Unified editorial page headings: light lead-in, bold animated accent. */
+.page-head .display{font-weight:300}
+.page-head .display .weight-accent{font-weight:700}
+.page-head .display .page-gradient{
+ display:inline-block;box-sizing:content-box;padding-right:.13em;
+ background-image:var(--word-spectrum)!important;
+ background-size:360% 100%!important;
+ background-position:0% 50%;
+ background-repeat:no-repeat;
+ -webkit-background-clip:text!important;background-clip:text!important;
+ color:transparent!important;-webkit-text-fill-color:transparent!important;
+ animation:word-spectrum 4.5s ease-in-out infinite alternate!important;
+}
+@media(prefers-reduced-motion:reduce){.page-head .display .page-gradient{animation:none!important}}
+/* Work project field uses the same cream-to-lime scroll transition as Home. */
+.work-main{isolation:isolate;position:relative}
+.work-main .section{position:relative;z-index:1}
+/* Square, roomier controls throughout the site; keep the hamburger and cursor unchanged. */
+.pill,.motion-link,.motion-caption .motion-link.pill,.filter,
+.contact-form button,button[type="submit"]:not(.menu-btn){
+ border-radius:0!important;
+ padding-left:30px!important;padding-right:30px!important;
+}
+.motion-caption .motion-link.pill{padding-left:30px!important;padding-right:30px!important}
