@@ -339,3 +339,22 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .hero-video-experiment .hero-overlay-white .hero-summary,.hero-video-experiment .hero-overlay-white .eyebrow,.hero-video-experiment .hero-overlay-white .hero-scroll-cue{color:#fff!important}
 .hero-video-experiment .hero-overlay-white .hero-cta-heading,.hero-video-experiment .hero-overlay-white .hero-copy{color:#fff!important}
 @media(prefers-reduced-motion:reduce){.hero-video-experiment .hero-overlay-white{display:none}}
+
+/* True viewport-height pinned first screen, including the 84px navigation.
+   Keep hero copy and Explore more anchored with responsive vertical breathing room. */
+.hero-video-experiment.motion-stage{margin-top:-84px}
+.hero-video-experiment .hero-overlay .home-intro{
+ height:100svh;min-height:0;max-height:100svh;
+ padding-top:clamp(100px,15svh,160px);
+ padding-bottom:clamp(34px,7svh,92px);
+ box-sizing:border-box;
+}
+@media(max-height:800px) and (min-width:801px){
+ .hero-video-experiment .hero-overlay .home-intro{padding-top:clamp(95px,13svh,125px);padding-bottom:clamp(28px,5svh,55px)}
+ .hero-video-experiment .hero-overlay .hero-cta-heading{font-size:min(10.7vw,17svh)}
+ .hero-video-experiment .hero-overlay .hero-copy .hero-cta-heading{margin-top:clamp(16px,3svh,30px)}
+ .hero-video-experiment .hero-overlay .hero-copy .hero-summary{margin-top:clamp(14px,2.7svh,25px)}
+}
+@media(max-width:800px){
+ .hero-video-experiment .hero-overlay .home-intro{padding-top:clamp(95px,14svh,140px);padding-bottom:clamp(28px,6svh,60px)}
+}
