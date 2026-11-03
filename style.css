@@ -183,3 +183,8 @@ body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),
 .services-home .service-row:after{transition:none}
 @media(max-width:800px){.services-home .service-row:hover,.services-home .service-row:focus-visible{padding-right:10px;transform:translateX(5px)}}
 @media(prefers-reduced-motion:reduce){.services-home .service-row{transition:none!important}}
+
+/* Keep the branded Y hidden whenever the project badge is active */
+body:has(.cursor-tip.visible) .brand-cursor{opacity:0!important}
+/* Tighten Atelier House / Mono Creative vertical rhythm in the right column */
+@media(min-width:801px){.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-255px}}
