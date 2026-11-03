@@ -606,3 +606,19 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
 .utopia-card-visual{background:#091b21;color:#fff!important;display:flex;align-items:center;justify-content:center;flex-direction:column;background-image:radial-gradient(ellipse at 30% 10%,#49777955,transparent 55%),repeating-linear-gradient(115deg,transparent 0 30px,#4f80801d 31px 32px,transparent 33px 70px)}
 .utopia-card-visual .utopia-script{font-size:clamp(75px,10vw,145px)}.utopia-card-visual>span{font-size:9px;letter-spacing:.6em}
 @media(max-width:800px){.utopia-hero{min-height:520px}.utopia-mark-section{min-height:480px}.utopia-tag-stage{min-height:620px}.utopia-end{min-height:420px}.utopia-country{font-size:9px}.utopia-card-visual .utopia-script{font-size:85px}}
+
+/* Fix Utopia's stacked placeholder lettering: prevent lines from colliding. */
+.utopia-case .utopia-script,
+.utopia-card-visual .utopia-script{
+ line-height:1.02!important;
+ letter-spacing:-.065em!important;
+ font-size:clamp(88px,12vw,170px)!important;
+ transform:rotate(-4deg);
+ padding:.12em .24em .16em!important;
+ overflow:visible;
+}
+.utopia-case .utopia-mark-wrap .utopia-script{font-size:clamp(100px,14vw,190px)!important}
+.utopia-case .utopia-tag .utopia-script{font-size:72px!important;line-height:.94!important}
+.utopia-case .utopia-end .utopia-script{font-size:95px!important}
+.utopia-card-visual .utopia-script{font-size:clamp(58px,7vw,95px)!important}
+@media(max-width:800px){.utopia-case .utopia-script{font-size:clamp(76px,17vw,120px)!important}}
