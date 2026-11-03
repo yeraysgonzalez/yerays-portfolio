@@ -9,3 +9,8 @@
 .footer-mark{display:inline-block;width:24px;height:29px;object-fit:contain;vertical-align:middle;margin-right:12px;filter:invert(1)}
 @media(max-width:800px){.brand img{height:39px;width:34px}}
 @media(prefers-reduced-motion:reduce){.topbar{transition:none!important}}
+
+/* Keep navigation sticky across page sections, not just its container */
+body>.container:first-child{position:fixed;top:0;left:0;right:0;width:100%;max-width:none;padding:0 max(3.5vw,calc((100vw - 1680px)/2));z-index:80;background:var(--bg)}
+body{padding-top:84px}
+@media(max-width:800px){body{padding-top:70px}body>.container:first-child{padding:0 20px}}
