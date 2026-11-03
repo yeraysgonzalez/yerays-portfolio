@@ -252,3 +252,13 @@ body.cursor-tracking,body.cursor-tracking a,body.cursor-tracking button{cursor:n
 .brand-cursor.on-dark{filter:brightness(0) invert(1) drop-shadow(0 1px 1px #0005)}
 body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tracking) a,body.cursor-over-dark:not(.cursor-tracking) button{cursor:none!important}
 }
+
+/* Align the hero's copy and scroll cue on the same lower baseline. */
+.home-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:28px;padding-top:clamp(125px,16vh,220px);padding-bottom:clamp(22px,3.5vh,42px)}
+.home-intro .hero-copy{min-width:0;align-self:end}
+.home-intro .hero-copy .hero-cta-heading{margin-top:38px}
+.home-intro .hero-copy .hero-summary{margin:clamp(25px,3vw,45px) 0 0;max-width:580px}
+.home-intro .hero-scroll-cue{align-self:end;margin:0;padding:0 0 3px;white-space:nowrap}
+.motion-frame{opacity:0;will-change:width,height,opacity}
+@media(max-width:800px){.home-intro{grid-template-columns:1fr;padding-top:clamp(90px,12vh,150px);padding-bottom:24px;row-gap:42px}.home-intro .hero-scroll-cue{justify-self:end}}
+@media(prefers-reduced-motion:reduce){.motion-frame{opacity:1}}
