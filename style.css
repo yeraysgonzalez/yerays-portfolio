@@ -78,3 +78,14 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .footer>.container{box-sizing:border-box;max-width:1680px;width:100%;margin-left:auto;margin-right:auto;padding-left:clamp(24px,3.5vw,64px);padding-right:clamp(24px,3.5vw,64px)}
 .footer-head{border-top:0!important;padding-top:0}
 @media(max-width:800px){.hero-summary{max-width:460px}.intro-panel{padding:75px 0}.intro-panel p{font-size:19px}.footer>.container{padding-left:20px;padding-right:20px}}
+
+/* Two-line hero with an off-canvas floating image overlapping the next section */
+.home-intro{position:relative;isolation:isolate;min-height:calc(100svh - 84px);justify-content:center;padding-bottom:120px}
+.home-intro .display{position:relative;z-index:2;font-size:clamp(55px,7.35vw,126px);line-height:.95;letter-spacing:-.078em;max-width:1050px;margin:25px 0 30px}
+.home-intro .hero-summary{position:relative;z-index:2;max-width:520px}
+.hero-floating-art{position:absolute;z-index:3;right:calc(-1 * max(3.5vw,(100vw - 1680px)/2));bottom:-135px;width:clamp(250px,29vw,465px);aspect-ratio:.84;overflow:hidden;transform:rotate(2deg);box-shadow:0 22px 65px #00000018;pointer-events:none}
+.hero-floating-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.06)}
+.intro-panel{position:relative;z-index:1;padding-top:clamp(155px,17vw,260px)}
+@media(min-width:1400px){.home-intro .display{max-width:1180px;font-size:clamp(85px,7.1vw,132px)}.hero-floating-art{width:clamp(330px,27vw,490px)}}
+@media(max-width:800px){.home-intro{min-height:calc(100svh - 70px);padding-bottom:150px;justify-content:flex-start;padding-top:70px}.home-intro .display{font-size:clamp(47px,9vw,75px);max-width:100%;line-height:.97}.home-intro .hero-summary{max-width:75%;font-size:16px}.hero-floating-art{right:-20px;bottom:-105px;width:clamp(175px,40vw,290px);transform:rotate(2deg)}.intro-panel{padding-top:160px}}
+@media(max-width:480px){.home-intro .display{font-size:clamp(42px,10.4vw,56px)}.home-intro .hero-summary{max-width:68%}.hero-floating-art{width:45vw;bottom:-95px}.intro-panel{padding-top:140px}}
