@@ -267,3 +267,26 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .home-intro{padding-bottom:clamp(60px,8vh,110px)}
 .brand img{height:33px;width:29px}
 @media(max-width:800px){.home-intro{padding-bottom:55px}.brand img{height:31px;width:27px}}
+
+/* Selected Work: active project expands while surrounding cards recede.
+   Compose with the existing scroll parallax rather than overriding it. */
+@media(min-width:801px) and (hover:hover) and (prefers-reduced-motion:no-preference){
+.selected-work-section .feature-grid{isolation:isolate}
+.selected-work-section .feature-grid>.tile{
+ --hover-scale:1;
+ transform:translate3d(0,var(--float-y,0px),0) scale(var(--hover-scale));
+ transform-origin:center center;
+ transition:transform .65s cubic-bezier(.22,1,.36,1),filter .65s ease;
+ z-index:1;
+}
+.selected-work-section .feature-grid:has(>.tile:hover)>.tile:not(:hover){
+ --hover-scale:.94;
+ filter:saturate(.86);
+}
+.selected-work-section .feature-grid>.tile:hover{
+ --hover-scale:1.095;
+ z-index:5;
+ filter:saturate(1.06);
+}
+.selected-work-section .feature-grid>.tile:hover .tile-visual img{transform:scale(1.015)}
+}
