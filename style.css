@@ -97,3 +97,13 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .motion-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid #f4f3ee;color:#f4f3ee;text-decoration:none;font-family:inherit;font-size:clamp(12px,1vw,15px);font-weight:600;line-height:1;letter-spacing:0;text-transform:uppercase;border-radius:100px;padding:15px 23px;transition:background .3s,color .3s,border-color .3s}
 .motion-link:hover,.motion-link:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 @media(max-width:800px){.home-intro{justify-content:center;padding-top:65px;padding-bottom:65px}.home-intro .display{font-size:clamp(64px,10.7vw,110px);line-height:.84;max-width:none}.motion-actions{margin-top:22px}.motion-link{padding:12px 18px}}
+
+/* Selected Work color shift stays full-bleed while content remains aligned */
+.selected-work-section{background:var(--bg);transition:none;position:relative;isolation:isolate}
+.selected-work-section>.section{position:relative}
+/* Continuous scrub: no eased plateau during sticky video scroll */
+.motion-stage{height:200vh}
+.motion-frame{will-change:width,height,border-radius}
+.motion-frame video{width:100%;height:100%;object-fit:cover;filter:brightness(.68);transform-origin:center;will-change:transform}
+@media(max-width:800px){.motion-stage{height:165vh}}
+@media(prefers-reduced-motion:reduce){.motion-stage{height:auto}.selected-work-section{background:var(--bg)!important}}
