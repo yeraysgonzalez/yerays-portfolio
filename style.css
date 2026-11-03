@@ -497,10 +497,28 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
 /* Work project field uses the same cream-to-lime scroll transition as Home. */
 .work-main{isolation:isolate;position:relative}
 .work-main .section{position:relative;z-index:1}
-/* Square, roomier controls throughout the site; keep the hamburger and cursor unchanged. */
-.pill,.motion-link,.motion-caption .motion-link.pill,.filter,
+
+/* Restore the original rounded pills, including the contact form CTA. */
+.pill,.motion-link,.motion-caption .motion-link.pill{border-radius:100px!important}
+.filter{border-radius:40px!important}
 .contact-form button,button[type="submit"]:not(.menu-btn){
- border-radius:0!important;
+ border-radius:100px!important;
  padding-left:30px!important;padding-right:30px!important;
 }
-.motion-caption .motion-link.pill{padding-left:30px!important;padding-right:30px!important}
+/* Descenders (g, y) need breathing room inside clipped gradient lettering. */
+.page-head .display{line-height:1.04;overflow:visible;padding-bottom:.11em}
+.page-head .display .page-gradient{
+ padding-bottom:.16em;
+ margin-bottom:-.16em;
+ vertical-align:baseline;
+}
+.page-head{padding-bottom:95px}
+@media(max-width:800px){.page-head{padding-bottom:75px}}
+/* Full-bleed gallery color wash: section content stays inside the grid. */
+.work-main>.section{background:transparent!important;isolation:isolate}
+.work-main>.section::before{
+ content:"";position:absolute;z-index:-1;top:0;bottom:0;
+ left:50%;width:100vw;transform:translateX(-50%);
+ background-color:var(--work-gallery-bg,var(--bg));
+ pointer-events:none;
+}
