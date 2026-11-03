@@ -447,3 +447,17 @@ body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!impo
  .motion-caption .weight-accent,.statement .lede .weight-accent,
  .footer .footer-cta .weight-accent{animation:none!important}
 }
+
+/* Match the hero headline to the footer CTA's typographic scale and weight. */
+.hero-video-experiment .hero-overlay .hero-copy .hero-cta-heading{
+ font-size:clamp(68px,12vw,190px)!important;
+ font-weight:700!important;
+ line-height:.92;
+ letter-spacing:-.09em;
+}
+.hero-video-experiment .hero-overlay .hero-copy .hero-cta-heading .weight-accent{font-weight:700!important}
+@media(max-width:800px){
+ .hero-video-experiment .hero-overlay .hero-copy .hero-cta-heading{
+  font-size:clamp(52px,12vw,100px)!important;
+ }
+}
