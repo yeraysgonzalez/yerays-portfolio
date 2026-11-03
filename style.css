@@ -470,3 +470,12 @@ body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!impo
 .statement .lede .weight-accent .type-char{
  color:#f4f3ee!important;-webkit-text-fill-color:#f4f3ee!important;
 }
+
+/* Keep the entrance choreography, but release the pinned video sooner once Ideas lands. */
+.hero-video-experiment.motion-stage{height:335vh}
+@media(max-width:800px){.hero-video-experiment.motion-stage{height:310vh}}
+/* Lighter lime navigation while scrolling: 85% opacity. */
+body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
+@media(max-width:800px){
+ body>.container:first-child.nav-scrolled .nav{background:rgba(217,246,110,.85)}
+}
