@@ -262,3 +262,8 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .motion-frame{opacity:0;will-change:width,height,opacity}
 @media(max-width:800px){.home-intro{grid-template-columns:1fr;padding-top:clamp(90px,12vh,150px);padding-bottom:24px;row-gap:42px}.home-intro .hero-scroll-cue{justify-self:end}}
 @media(prefers-reduced-motion:reduce){.motion-frame{opacity:1}}
+
+/* More breathing room below the hero content, with both columns aligned. */
+.home-intro{padding-bottom:clamp(60px,8vh,110px)}
+.brand img{height:33px;width:29px}
+@media(max-width:800px){.home-intro{padding-bottom:55px}.brand img{height:31px;width:27px}}
