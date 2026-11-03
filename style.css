@@ -290,3 +290,7 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 }
 .selected-work-section .feature-grid>.tile:hover .tile-visual img{transform:scale(1.015)}
 }
+
+/* Editorial type-weight contrast, without altering layout or motion. */
+.weight-accent{font-weight:700}
+.hero-cta-heading .weight-accent,.motion-caption .weight-accent,.section-line h2 .weight-accent,.footer-cta .weight-accent{font-weight:700}
