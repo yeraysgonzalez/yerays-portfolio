@@ -188,3 +188,25 @@ body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),
 body:has(.cursor-tip.visible) .brand-cursor{opacity:0!important}
 /* Tighten Atelier House / Mono Creative vertical rhythm in the right column */
 @media(min-width:801px){.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-255px}}
+
+/* Return What I Do to neutral background with full-bleed lime row hovers */
+.services-home{--services-scroll-color:transparent;background:transparent}
+.services-home:before{display:none!important}
+.services-home .service-row:before{display:block!important;background:var(--accent)!important}
+.services-home .service-row{padding-right:0!important;transform:none!important;transition:transform .4s cubic-bezier(.22,1,.36,1)!important}
+.services-home .service-row:hover,.services-home .service-row:focus-visible{padding-right:0!important;transform:none!important}
+.services-home .service-row:hover:before,.services-home .service-row:focus-visible:before{opacity:1}
+/* Editorial hero CTA: match footer typography, scale and lime hover */
+.home-intro{position:relative;min-height:calc(100svh - 84px);display:flex;flex-direction:column;align-items:flex-start}
+.home-intro .hero-cta-heading{font-size:clamp(68px,12vw,190px);font-weight:500;letter-spacing:-.09em;line-height:.92;margin:38px 0 0}
+.hero-cta{display:inline-block;transition:color .4s ease}
+.hero-cta:hover,.hero-cta:focus-visible{color:var(--accent)}
+.hero-cta-arrow{display:inline-block;font-size:.75em;vertical-align:.06em;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.hero-cta:hover .hero-cta-arrow,.hero-cta:focus-visible .hero-cta-arrow{transform:translate(10px,-10px)}
+.home-intro .hero-summary{margin-top:clamp(26px,4vw,54px)}
+.hero-scroll-cue{align-self:flex-end;margin-top:auto;padding:26px 0 6px;display:inline-flex;align-items:center;gap:14px;text-transform:uppercase;letter-spacing:.09em;font-size:12px;font-weight:600}
+.hero-scroll-arrow{font-size:25px;display:inline-block;animation:hero-arrow-bounce 1.8s ease-in-out infinite}
+.hero-scroll-cue:hover{color:#6b8240}
+@keyframes hero-arrow-bounce{0%,100%{transform:translateY(-4px)}50%{transform:translateY(7px)}}
+@media(max-width:800px){.home-intro{min-height:calc(100svh - 84px)}.home-intro .hero-cta-heading{font-size:clamp(68px,12vw,190px)}.hero-scroll-cue{padding-top:30px}}
+@media(prefers-reduced-motion:reduce){.hero-scroll-arrow{animation:none}.hero-cta,.hero-cta-arrow{transition:none}}
