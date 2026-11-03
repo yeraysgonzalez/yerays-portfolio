@@ -358,3 +358,10 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 @media(max-width:800px){
  .hero-video-experiment .hero-overlay .home-intro{padding-top:clamp(95px,14svh,140px);padding-bottom:clamp(28px,6svh,60px)}
 }
+
+/* Give the video caption a little more scroll distance to complete its entrance. */
+.hero-video-experiment.motion-stage{height:395vh}
+@media(max-width:800px){.hero-video-experiment.motion-stage{height:365vh}}
+/* Scrolled navigation: 95% lime, allowing underlying content to show through. */
+body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.95)}
+@media(max-width:800px){body>.container:first-child.nav-scrolled .nav{background:rgba(217,246,110,.95)}}
