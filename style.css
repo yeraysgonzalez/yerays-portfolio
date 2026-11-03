@@ -222,3 +222,18 @@ body:has(.cursor-tip.visible) .brand-cursor{opacity:0!important}
 @media(min-width:801px){.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-385px}}
 @media(max-width:800px){.home-intro:before{left:-20px;right:-20px}}
 @media(prefers-reduced-motion:reduce){.hero-scroll-cue{animation:none}.home-intro,.home-intro:before{transition:none}}
+
+/* Hero: no background inversion; simple lime CTA hover */
+.home-intro:before{display:none!important}
+.home-intro:has(.hero-cta:hover),.home-intro:has(.hero-cta:focus-visible){color:var(--ink)!important}
+.home-intro:has(.hero-cta:hover) .hero-cta,.home-intro:has(.hero-cta:focus-visible) .hero-cta{color:var(--accent)}
+/* A native Y cursor appears immediately on page load; the animated custom Y follows movement. */
+@media(pointer:fine) and (prefers-reduced-motion:no-preference){
+body,body a,body button{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='32' viewBox='0 0 1022 1183'%3E%3Cpath fill='%23000' d='M1020 0H731L516 441 289 0H0L374 731 156 1181H445Z'/%3E%3Cpath fill='%23000' d='M864 904 811 922 772 956 748 1002 743 1059 760 1111 794 1151 845 1177 897 1181 948 1165 990 1130 1016 1079 1020 1026 1003 974 968 933 915 907Z'/%3E%3C/svg%3E") 2 2,auto!important}
+body.cursor-tracking,body.cursor-tracking a,body.cursor-tracking button{cursor:none!important}
+}
+/* Hold the video at full bleed while the text rises into view. */
+.motion-stage{height:255vh}
+.motion-caption{opacity:0;visibility:hidden;transform:translateY(65px);transition:none;will-change:opacity,transform}
+@media(max-width:800px){.motion-stage{height:220vh}}
+@media(prefers-reduced-motion:reduce){.motion-caption{opacity:1;visibility:visible;transform:none}}
