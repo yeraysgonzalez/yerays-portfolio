@@ -300,3 +300,8 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .statement .lede{font-weight:300}
 .statement .lede .weight-accent{font-weight:700}
 .weight-accent{font-weight:700}
+
+/* Character-by-character typing: reserve natural text layout; no fade. */
+.type-char{visibility:hidden}
+.type-char.typed{visibility:visible}
+@media(prefers-reduced-motion:reduce){.type-char{visibility:visible}}
