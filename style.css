@@ -395,3 +395,13 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.95)}
 @media(prefers-reduced-motion:reduce){
  .hero-video-experiment .hero-overlay:not(.hero-overlay-white) .hero-cta-heading.typing-finished .weight-accent{animation:none;background-image:none;color:var(--ink)!important;-webkit-text-fill-color:var(--ink)}
 }
+
+/* Explicit black hamburger on iOS Safari (native buttons may otherwise inherit blue). */
+body>.container:first-child .menu-btn,
+body>.container:first-child.nav-scrolled .menu-btn{
+ color:#181918!important;
+ -webkit-text-fill-color:#181918;
+ -webkit-appearance:none;
+ appearance:none;
+}
+body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!important}
