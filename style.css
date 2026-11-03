@@ -14,3 +14,14 @@
 body>.container:first-child{position:fixed;top:0;left:0;right:0;width:100%;max-width:none;padding:0 max(3.5vw,calc((100vw - 1680px)/2));z-index:80;background:var(--bg)}
 body{padding-top:84px}
 @media(max-width:800px){body{padding-top:70px}body>.container:first-child{padding:0 20px}}
+
+/* November refinements: compact hero, hover palette and sliding navigation */
+.home-intro .display{line-height:.84}
+.footer h2 a{transition:color .32s ease,border-color .32s ease}
+.footer h2 a:hover{color:var(--accent);border-color:var(--accent)}
+.statement .pill:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+body>.container:first-child{transition:transform .46s cubic-bezier(.22,1,.36,1);will-change:transform}
+body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
+.topbar.nav-hidden{transform:none}
+.nav a.active{border-bottom:1px solid currentColor}
+@media(prefers-reduced-motion:reduce){body>.container:first-child{transition:none!important}}
