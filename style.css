@@ -114,3 +114,26 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .service-row{transition:background-color .65s cubic-bezier(.22,1,.36,1),padding-left .5s cubic-bezier(.22,1,.36,1),color .45s ease}
 .service-row:hover{padding-left:12px;background-color:var(--accent)}
 @media(prefers-reduced-motion:reduce){.service-row{transition:none!important}}
+
+/* November: generous section rhythm and full-bleed editorial rules */
+.section{padding-top:clamp(165px,14vw,235px)}
+.section-line{padding-top:32px}
+.selected-work-section .feature-grid>.tile:nth-child(5){grid-column:2;justify-self:stretch;width:100%;margin-top:20px}
+.selected-work-section .feature-grid>.tile:nth-child(5) .tile-visual{aspect-ratio:.84}
+/* Service separators and hover backgrounds reach both viewport edges; text remains on grid */
+.services-home .service-list{border-top:0}
+.services-home .service-row{position:relative;z-index:0;border-bottom:0;background:transparent!important;padding-left:0!important;transition:none}
+.services-home .service-row:before{content:'';position:absolute;z-index:-1;inset:0 calc((min(100vw - 7vw, 1680px) - 100vw)/2);background:var(--accent);opacity:0;transition:opacity .65s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.services-home .service-row:hover:before,.services-home .service-row:focus-visible:before{opacity:1}
+.services-home .service-row:after{content:'';position:absolute;bottom:0;left:calc((min(100vw - 7vw, 1680px) - 100vw)/2);right:calc((min(100vw - 7vw, 1680px) - 100vw)/2);border-bottom:1px solid var(--line);pointer-events:none}
+.services-home .service-list:before{content:'';display:block;position:relative;left:calc((min(100vw - 7vw, 1680px) - 100vw)/2);width:100vw;border-top:1px solid var(--line)}
+/* Footer divider is full bleed, but footer text stays aligned to container */
+.footer-bottom{position:relative;border-top:0!important}
+.footer-bottom:before{content:'';position:absolute;top:0;left:50%;width:100vw;transform:translateX(-50%);border-top:1px solid #575a53}
+/* Home navigation remains pinned and turns lime on scroll */
+body>.container:first-child{transition:background-color .45s ease}
+body>.container:first-child.nav-scrolled{background:var(--accent)}
+body>.container:first-child.nav-scrolled .topbar{background:transparent;color:var(--ink)}
+body>.container:first-child.nav-scrolled .nav a,body>.container:first-child.nav-scrolled .menu-btn{color:var(--ink)}
+@media(max-width:800px){.section{padding-top:120px}.selected-work-section .feature-grid>.tile:nth-child(5){grid-column:1;margin-top:0}.services-home .service-row:before,.services-home .service-row:after{left:-20px;right:-20px}.services-home .service-list:before{left:-20px;width:100vw}body>.container:first-child.nav-scrolled .nav{background:var(--accent)}}
+@media(prefers-reduced-motion:reduce){.services-home .service-row:before,body>.container:first-child{transition:none!important}}
