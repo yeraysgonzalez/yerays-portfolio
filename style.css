@@ -170,3 +170,6 @@ body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),
 @media(pointer:fine) and (prefers-reduced-motion:no-preference){body,body a,body button{cursor:none!important}.brand-cursor{position:fixed;z-index:110;top:-100px;left:-100px;width:25px;height:30px;object-fit:contain;pointer-events:none;opacity:0;transform:translate(-3px,-3px);transition:opacity .12s ease;filter:drop-shadow(0 1px 1px #ffffffaa)}.brand-cursor.is-visible{opacity:1}}
 @media(pointer:fine) and (prefers-reduced-motion:reduce){.brand-cursor{display:none}}
 @media(max-width:800px){.services-home{padding-top:65px}.selected-work-section .feature-grid>.tile:nth-child(3) .tile-visual,.selected-work-section .feature-grid>.tile:nth-child(4) .tile-visual{aspect-ratio:1.15!important}}
+
+/* Square video edges at every scroll position */
+.motion-frame{border-radius:0!important}
