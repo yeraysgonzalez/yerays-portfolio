@@ -107,3 +107,10 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .motion-frame video{width:100%;height:100%;object-fit:cover;filter:brightness(.68);transform-origin:center;will-change:transform}
 @media(max-width:800px){.motion-stage{height:165vh}}
 @media(prefers-reduced-motion:reduce){.motion-stage{height:auto}.selected-work-section{background:var(--bg)!important}}
+
+/* CTA typography matches All Projects exactly */
+.motion-caption .motion-link.pill{font-size:12px!important;letter-spacing:.06em!important;font-weight:600!important;line-height:normal!important;padding:12px 19px!important;text-transform:uppercase!important}
+/* Gentle service hover, preserving separators and grid alignment */
+.service-row{transition:background-color .65s cubic-bezier(.22,1,.36,1),padding-left .5s cubic-bezier(.22,1,.36,1),color .45s ease}
+.service-row:hover{padding-left:12px;background-color:var(--accent)}
+@media(prefers-reduced-motion:reduce){.service-row{transition:none!important}}
