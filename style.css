@@ -153,3 +153,20 @@ body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),
 .services-home .service-row:nth-child(5){--service-hover:#a78be1}
 .services-home .service-row:before{background:var(--service-hover,var(--accent))}
 @media(prefers-reduced-motion:reduce){body>.container:first-child{transition:none!important}}
+
+/* Gallery art direction: elongated Objects, squarer Atelier, staggered fifth card */
+@media(min-width:801px){
+.selected-work-section .feature-grid>.tile:nth-child(3){margin-top:210px}
+.selected-work-section .feature-grid>.tile:nth-child(3) .tile-visual{aspect-ratio:.72}
+.selected-work-section .feature-grid>.tile:nth-child(4) .tile-visual{aspect-ratio:1.18}
+.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-135px}
+}
+/* Less dead space before What I Do, no upper divider */
+.services-home{padding-top:clamp(70px,7vw,110px)}
+.services-home>.section-line{border-top:0;padding-top:0}
+/* The hover badge starts off-screen, so it cannot flash at (0,0). */
+.cursor-tip{left:-200px;top:-200px}
+/* Desktop Y logo cursor; retain native cursor on touch/reduced-motion. */
+@media(pointer:fine) and (prefers-reduced-motion:no-preference){body,body a,body button{cursor:none!important}.brand-cursor{position:fixed;z-index:110;top:-100px;left:-100px;width:25px;height:30px;object-fit:contain;pointer-events:none;opacity:0;transform:translate(-3px,-3px);transition:opacity .12s ease;filter:drop-shadow(0 1px 1px #ffffffaa)}.brand-cursor.is-visible{opacity:1}}
+@media(pointer:fine) and (prefers-reduced-motion:reduce){.brand-cursor{display:none}}
+@media(max-width:800px){.services-home{padding-top:65px}.selected-work-section .feature-grid>.tile:nth-child(3) .tile-visual,.selected-work-section .feature-grid>.tile:nth-child(4) .tile-visual{aspect-ratio:1.15!important}}
