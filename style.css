@@ -326,3 +326,9 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 @media(prefers-reduced-motion:reduce){.hero-video-experiment.motion-stage{height:auto}.hero-video-experiment .motion-pin{position:relative;height:100svh}.hero-video-experiment .hero-overlay{mix-blend-mode:normal;color:var(--ink)}.hero-video-experiment .motion-frame{opacity:0!important}}
 
 .hero-video-experiment .video-reveal-anchor{position:absolute;top:75vh;left:0;width:1px;height:1px;pointer-events:none}
+
+/* Full-bleed vertical video wipe: reveal at scroll speed, never scale or fade. */
+.hero-video-experiment .motion-frame{width:100vw!important;height:100svh!important;opacity:1!important;transform:translate3d(0,100%,0);will-change:transform;overflow:hidden}
+.hero-video-experiment .motion-frame video,.hero-video-experiment .motion-frame img{transform:none!important;width:100%;height:100%;object-fit:cover}
+.hero-video-experiment .hero-overlay{mix-blend-mode:difference}
+@media(prefers-reduced-motion:reduce){.hero-video-experiment .motion-frame{opacity:0!important;transform:none!important}}
