@@ -324,3 +324,5 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .hero-video-experiment .motion-frame{will-change:width,height,opacity}
 @media(max-width:800px){.hero-video-experiment.motion-stage{height:340vh}.hero-video-experiment .hero-overlay .home-intro{min-height:100svh}}
 @media(prefers-reduced-motion:reduce){.hero-video-experiment.motion-stage{height:auto}.hero-video-experiment .motion-pin{position:relative;height:100svh}.hero-video-experiment .hero-overlay{mix-blend-mode:normal;color:var(--ink)}.hero-video-experiment .motion-frame{opacity:0!important}}
+
+.hero-video-experiment .video-reveal-anchor{position:absolute;top:75vh;left:0;width:1px;height:1px;pointer-events:none}
