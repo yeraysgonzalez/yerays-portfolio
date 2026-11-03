@@ -173,3 +173,13 @@ body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),
 
 /* Square video edges at every scroll position */
 .motion-frame{border-radius:0!important}
+
+/* What I Do: continuous lime-to-violet scroll background, not individual hover fills */
+.services-home{position:relative;isolation:isolate;--services-scroll-color:#d9f66e}
+.services-home:before{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:var(--services-scroll-color);pointer-events:none}
+.services-home .service-row:before{display:none!important}
+.services-home .service-row{padding-left:0!important;padding-right:0;transition:padding-right .4s cubic-bezier(.22,1,.36,1),transform .4s cubic-bezier(.22,1,.36,1)!important}
+.services-home .service-row:hover,.services-home .service-row:focus-visible{padding-left:0!important;padding-right:18px;transform:translateX(10px)}
+.services-home .service-row:after{transition:none}
+@media(max-width:800px){.services-home .service-row:hover,.services-home .service-row:focus-visible{padding-right:10px;transform:translateX(5px)}}
+@media(prefers-reduced-motion:reduce){.services-home .service-row{transition:none!important}}
