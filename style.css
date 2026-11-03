@@ -25,3 +25,8 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 .topbar.nav-hidden{transform:none}
 .nav a.active{border-bottom:1px solid currentColor}
 @media(prefers-reduced-motion:reduce){body>.container:first-child{transition:none!important}}
+
+/* Clean header and cinematic video placeholder */
+.topbar{border-bottom:0!important}
+.motion-frame video{display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.72);transform:scale(1.07);will-change:transform}
+@media(prefers-reduced-motion:reduce){.motion-frame video{transform:none}}
