@@ -34,3 +34,20 @@ body>.container:first-child.nav-hidden{transform:translate3d(0,-105%,0)}
 /* Footer CTA: full phrase hover, no underline */
 .footer h2 a,.footer h2 a:visited{display:inline-block;text-decoration:none!important;border:0!important;box-shadow:none!important;color:inherit;transition:color .38s cubic-bezier(.22,1,.36,1)}
 .footer h2 a:hover,.footer h2 a:focus-visible{color:var(--accent)!important;text-decoration:none!important;border:0!important;box-shadow:none!important}
+
+/* Floating, staggered editorial project gallery */
+@media(min-width:801px){
+.feature-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);row-gap:clamp(145px,16vw,260px)}
+.feature-grid>.tile:nth-child(1){margin-top:0}
+.feature-grid>.tile:nth-child(2){margin-top:175px}
+.feature-grid>.tile:nth-child(3){width:80%;justify-self:start;margin-top:95px}
+.feature-grid>.tile:nth-child(4){width:100%;margin-top:-90px}
+.feature-grid>.tile:nth-child(3) .tile-visual{aspect-ratio:1.08}
+.work-grid{row-gap:clamp(150px,17vw,280px)}
+.work-grid>.tile:nth-child(4n+3){width:84%;justify-self:start;margin-top:125px}
+.work-grid>.tile:nth-child(4n+4){margin-top:-70px}
+.work-grid>.tile:nth-child(4n+2){margin-top:185px}
+}
+.tile.parallax-card{--float-y:0px;transform:translate3d(0,var(--float-y),0);will-change:transform}
+@media(max-width:800px){.tile.parallax-card{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.tile.parallax-card{transform:none!important}}
