@@ -294,3 +294,9 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 /* Editorial type-weight contrast, without altering layout or motion. */
 .weight-accent{font-weight:700}
 .hero-cta-heading .weight-accent,.motion-caption .weight-accent,.section-line h2 .weight-accent,.footer-cta .weight-accent{font-weight:700}
+
+/* Lighter supporting typography increases contrast with the existing 700 accents. */
+.hero-cta-heading,.motion-caption,.section-line h2,.footer h2{font-weight:300}
+.statement .lede{font-weight:300}
+.statement .lede .weight-accent{font-weight:700}
+.weight-accent{font-weight:700}
