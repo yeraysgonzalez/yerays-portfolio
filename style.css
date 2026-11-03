@@ -391,19 +391,18 @@ body>.container:first-child.nav-scrolled .menu-btn{
 body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!important}
 
 
-/* Multi-color gradient moves across the word, not a single solid color.
-   A black lead-in means Purpose begins exactly where typing left it. */
+/* Faster multi-color gradient visible from the first typed letter, with no black stops. */
 @keyframes word-spectrum{
   0%{background-position:0% 50%}
   100%{background-position:100% 50%}
 }
 :root{
  --word-spectrum:linear-gradient(105deg,
- #181918 0%,#181918 24%,#a4e65c 37%,
- #f0a24f 49%,#e97da8 61%,#8966e6 73%,
- #548ee7 85%,#181918 100%);
+ #a4e65c 0%,#f0a24f 17%,#e97da8 34%,
+ #8966e6 51%,#548ee7 68%,#a4e65c 85%,
+ #f0a24f 100%);
 }
-.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent,
+.hero-video-experiment .hero-overlay .hero-cta-heading .weight-accent,
 .motion-caption .weight-accent,
 .statement .lede .weight-accent,
 .footer .footer-cta .weight-accent{
@@ -418,22 +417,15 @@ body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!impo
  background-clip:text!important;
  color:transparent!important;
  -webkit-text-fill-color:transparent!important;
- animation:word-spectrum 8s ease-in-out infinite alternate!important;
+ animation:word-spectrum 4.5s ease-in-out infinite alternate!important;
 }
 /* Restore the exact typing reveal and keep letters clipped by their whole word,
    rather than individually colored or clipped at the final 'e'. */
-.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent .type-char,
+.hero-video-experiment .hero-overlay .hero-cta-heading .weight-accent .type-char,
 .statement .lede .weight-accent .type-char,
 .footer .footer-cta .weight-accent .type-char{
  color:inherit!important;
  -webkit-text-fill-color:inherit!important;
-}
-.hero-video-experiment .hero-overlay .hero-cta-heading:not(.typing-finished) .weight-accent{
- background:none!important;animation:none!important;
- color:inherit!important;-webkit-text-fill-color:currentColor!important;
-}
-.hero-video-experiment .hero-overlay-white .hero-cta-heading:not(.typing-finished) .weight-accent{
- color:#fff!important;-webkit-text-fill-color:#fff!important;
 }
 /* Keep all unaccented Approach copy white. */
 .statement .lede>span{color:#f4f3ee!important;animation:none!important}
@@ -451,7 +443,7 @@ body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!impo
  color:inherit!important;-webkit-text-fill-color:inherit!important;
 }
 @media(prefers-reduced-motion:reduce){
- .hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent,
+ .hero-video-experiment .hero-overlay .hero-cta-heading .weight-accent,
  .motion-caption .weight-accent,.statement .lede .weight-accent,
  .footer .footer-cta .weight-accent{animation:none!important}
 }
