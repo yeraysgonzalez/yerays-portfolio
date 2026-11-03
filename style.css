@@ -574,3 +574,35 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
 .brook-card-roundel small{font-size:8px;font-weight:500;margin-top:5px}
 .brook-card-visual>span{font-size:clamp(13px,2vw,25px);line-height:1.15;font-weight:700;letter-spacing:-.03em}
 @media(max-width:800px){.brook-screen{min-height:350px}.brook-screen-strip,.brook-split-visual{grid-template-columns:1fr}.brook-screen-strip .brook-photo-swatch{min-height:170px}.brook-red-panel{min-height:300px}.brook-photo-art{min-height:320px}.brook-phone{width:43vw;border-width:6px;border-radius:25px}.brook-phone-top{height:50px;padding:10px;font-size:10px}.brook-phone-content p{font-size:10px}.brook-phone-content h3{margin:12px 0}.brook-phone-content>span{margin-top:10px;font-size:8px}.brook-visual{padding-left:20px;padding-right:20px}.brook-swatches>div{height:120px;padding:10px;font-size:10px}.brook-meta{gap:12px}.brook-detail{min-height:420px}}
+
+/* Utopia Venezuela — branded case study. */
+.utopia-intro .display{font-weight:300}.utopia-intro .display .weight-accent{font-weight:700}
+.utopia-hero,.utopia-end{background:#091b21;color:white;position:relative;overflow:hidden;text-align:center;background-image:radial-gradient(ellipse at 20% 12%,#37666a66,transparent 35%),radial-gradient(ellipse at 85% 5%,#2c555b77,transparent 35%),repeating-linear-gradient(115deg,transparent 0 29px,#618a8b15 30px 32px,transparent 33px 68px)}
+.utopia-hero{min-height:780px;display:grid;place-items:center}
+.utopia-hero:before,.utopia-end:before{content:"";position:absolute;inset:-20% -10%;background:repeating-conic-gradient(from 15deg at 35% 5%,transparent 0deg 7deg,#52818525 8deg 9deg,transparent 10deg 19deg);opacity:.7;pointer-events:none}
+.utopia-hero-inner{position:relative;z-index:1}
+.utopia-script{font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-size:clamp(110px,19vw,270px);font-weight:700;letter-spacing:-.16em;line-height:.56;transform:rotate(-6deg);padding:.22em .2em .3em .08em}
+.utopia-country{font-size:13px;letter-spacing:.65em;display:block;margin-top:20px}
+.utopia-hero-note{position:absolute;bottom:32px;left:0;right:0;font-size:11px;letter-spacing:.15em;opacity:.7}
+.utopia-mark-section{background:#fff;min-height:680px;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;color:#0b252c}
+.utopia-mark-wrap{text-align:center}.utopia-mark-wrap .utopia-script{font-size:clamp(120px,20vw,280px)}.utopia-mark-wrap>span{font-size:11px;letter-spacing:.65em}
+.utopia-caption{font-size:11px;letter-spacing:.11em;text-align:center;opacity:.75;max-width:80%;line-height:1.6}
+.utopia-mark-section>.utopia-caption{position:absolute;bottom:28px}
+.utopia-lifestyle{height:clamp(520px,72vw,900px);position:relative;overflow:hidden;background:linear-gradient(180deg,#f4d5d7 0%,#f7e7e0 40%,#a3c1c8 60%,#456a7b 68%,#173b51 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;color:white}
+.utopia-lifestyle:after{content:"";position:absolute;inset:60% 0 0;background:repeating-linear-gradient(172deg,transparent 0 25px,#fff4 27px 30px,transparent 32px 65px);opacity:.5}
+.utopia-lifestyle-word{font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(110px,24vw,340px);font-style:italic;font-weight:700;letter-spacing:-.15em;line-height:1;position:relative;z-index:1}
+.utopia-lifestyle-country{position:relative;z-index:1;letter-spacing:.7em;font-size:12px}
+.utopia-lifestyle>.utopia-caption{position:absolute;bottom:20px;z-index:2;color:#fff}
+.utopia-tag-stage{background:radial-gradient(ellipse at 50% 20%,#fff7f7,#e4cfd2 70%,#b4a0ac);min-height:790px;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;overflow:hidden}
+.utopia-tag-string{position:absolute;top:-30px;width:3px;height:240px;background:#141a1a;transform:rotate(-7deg);z-index:2}
+.utopia-tag{height:340px;width:220px;background:linear-gradient(155deg,#204650,#101b2d);box-shadow:20px 35px 45px #1d1c2840;color:white;display:flex;align-items:center;flex-direction:column;justify-content:center;position:relative;transform:rotate(2deg)}
+.utopia-tag-hole{position:absolute;top:13px;left:calc(50% - 10px);width:20px;height:20px;border:4px solid #b5a48d;border-radius:50%;background:#101b2d}
+.utopia-tag .utopia-script{font-size:95px;line-height:.53;padding:.1em .3em .22em .1em}
+.utopia-tag small{font-size:7px;letter-spacing:.35em}.utopia-tag-dots{margin-top:35px;letter-spacing:7px}.utopia-tag em{font-family:"Brush Script MT","Segoe Script",cursive;font-size:28px}
+.utopia-tag-stage>.utopia-caption{position:absolute;bottom:25px;color:#28333a}
+.utopia-end{min-height:580px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+.utopia-end-title{font-size:clamp(12px,2.3vw,25px);letter-spacing:.32em;position:relative;z-index:1}
+.utopia-end .utopia-script{font-size:110px;position:relative;z-index:1}.utopia-end>span{letter-spacing:.5em;font-size:10px;position:relative;z-index:1}
+.utopia-card-visual{background:#091b21;color:#fff!important;display:flex;align-items:center;justify-content:center;flex-direction:column;background-image:radial-gradient(ellipse at 30% 10%,#49777955,transparent 55%),repeating-linear-gradient(115deg,transparent 0 30px,#4f80801d 31px 32px,transparent 33px 70px)}
+.utopia-card-visual .utopia-script{font-size:clamp(75px,10vw,145px)}.utopia-card-visual>span{font-size:9px;letter-spacing:.6em}
+@media(max-width:800px){.utopia-hero{min-height:520px}.utopia-mark-section{min-height:480px}.utopia-tag-stage{min-height:620px}.utopia-end{min-height:420px}.utopia-country{font-size:9px}.utopia-card-visual .utopia-script{font-size:85px}}
