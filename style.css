@@ -390,74 +390,68 @@ body>.container:first-child.nav-scrolled .menu-btn{
 }
 body>.container:first-child .menu-btn .menu-icon i{background-color:#181918!important}
 
-/* Shared smooth spectrum. Color interpolation starts at the existing ink/white,
-   not a clipped background image: prevents the final 'e' being cropped. */
-@keyframes spectrum-ink{
- 0%,100%{color:#181918}
- 15%{color:#a4e65c}
- 32%{color:#f0a24f}
- 49%{color:#e97da8}
- 66%{color:#8966e6}
- 83%{color:#548ee7}
+
+/* Multi-color gradient moves across the word, not a single solid color.
+   A black lead-in means Purpose begins exactly where typing left it. */
+@keyframes word-spectrum{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
 }
-@keyframes spectrum-light{
- 0%,100%{color:#f4f3ee}
- 15%{color:#a4e65c}
- 32%{color:#f0a24f}
- 49%{color:#e97da8}
- 66%{color:#8966e6}
- 83%{color:#548ee7}
+:root{
+ --word-spectrum:linear-gradient(105deg,
+ #181918 0%,#181918 24%,#a4e65c 37%,
+ #f0a24f 49%,#e97da8 61%,#8966e6 73%,
+ #548ee7 85%,#181918 100%);
 }
-@keyframes spectrum-work{
- 0%,100%{background-color:#d9f66e}
- 18%{background-color:#a4e65c}
- 35%{background-color:#f0a24f}
- 52%{background-color:#e97da8}
- 69%{background-color:#8966e6}
- 85%{background-color:#548ee7}
+.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent,
+.motion-caption .weight-accent,
+.statement .lede .weight-accent,
+.footer .footer-cta .weight-accent{
+ display:inline-block;
+ box-sizing:content-box;
+ padding-right:.13em;
+ background-image:var(--word-spectrum)!important;
+ background-size:360% 100%!important;
+ background-position:0% 50%;
+ background-repeat:no-repeat;
+ -webkit-background-clip:text!important;
+ background-clip:text!important;
+ color:transparent!important;
+ -webkit-text-fill-color:transparent!important;
+ animation:word-spectrum 8s ease-in-out infinite alternate!important;
 }
-.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent{
- background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;
- -webkit-text-fill-color:currentColor!important;
- animation:spectrum-ink 16s linear infinite!important;
- padding-right:.075em;margin-right:-.075em;
+/* Restore the exact typing reveal and keep letters clipped by their whole word,
+   rather than individually colored or clipped at the final 'e'. */
+.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent .type-char,
+.statement .lede .weight-accent .type-char,
+.footer .footer-cta .weight-accent .type-char{
+ color:inherit!important;
+ -webkit-text-fill-color:inherit!important;
 }
-.hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent .type-char{
- color:inherit!important;-webkit-text-fill-color:inherit!important;
+.hero-video-experiment .hero-overlay .hero-cta-heading:not(.typing-finished) .weight-accent{
+ background:none!important;animation:none!important;
+ color:inherit!important;-webkit-text-fill-color:currentColor!important;
 }
-/* The masked white copy keeps its precise clipping, but purpose remains colorful. */
-.hero-video-experiment .hero-overlay-white .hero-cta-heading.typing-finished .weight-accent,
-.hero-video-experiment .hero-overlay-white .hero-cta-heading.typing-finished .weight-accent .type-char{
- -webkit-text-fill-color:currentColor!important;
+.hero-video-experiment .hero-overlay-white .hero-cta-heading:not(.typing-finished) .weight-accent{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
 }
-.motion-caption .weight-accent{
- animation:spectrum-light 16s linear infinite;
- color:#f4f3ee;
-}
-/* Preserve the existing scroll-to-lime transition, then let the work background cycle. */
-.selected-work-section{position:relative;isolation:isolate}
-.selected-work-section::before{
- content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
- opacity:var(--spectrum-opacity,0);
- animation:spectrum-work 10s linear infinite;
-}
-.selected-work-section>.section{position:relative;z-index:1}
-.statement .lede>span{
- animation:spectrum-light 16s linear infinite;
-}
-.statement .lede>span .type-char,
-.statement .lede>span .weight-accent{color:inherit!important;-webkit-text-fill-color:currentColor}
+/* Keep all unaccented Approach copy white. */
+.statement .lede>span{color:#f4f3ee!important;animation:none!important}
+.statement .lede>span>.type-char{color:#f4f3ee!important;-webkit-text-fill-color:#f4f3ee!important}
+/* Footer gradient is limited to happen; hover makes the complete CTA lime. */
 .footer h2 .footer-cta:hover,.footer h2 .footer-cta:focus-visible{
- animation:spectrum-light 16s linear infinite!important;
- color:#f4f3ee!important;
+ color:var(--accent)!important;animation:none!important;
+}
+.footer h2 .footer-cta:hover .weight-accent,
+.footer h2 .footer-cta:focus-visible .weight-accent{
+ animation:none!important;background:none!important;
+ color:var(--accent)!important;-webkit-text-fill-color:var(--accent)!important;
 }
 .footer h2 .footer-cta:hover .type-char,.footer h2 .footer-cta:focus-visible .type-char{
- color:inherit!important;-webkit-text-fill-color:currentColor;
+ color:inherit!important;-webkit-text-fill-color:inherit!important;
 }
 @media(prefers-reduced-motion:reduce){
  .hero-video-experiment .hero-overlay .hero-cta-heading.typing-finished .weight-accent,
- .motion-caption .weight-accent,.statement .lede>span,
- .footer h2 .footer-cta:hover,.footer h2 .footer-cta:focus-visible,
- .selected-work-section::before{animation:none!important}
- .selected-work-section::before{display:none}
+ .motion-caption .weight-accent,.statement .lede .weight-accent,
+ .footer .footer-cta .weight-accent{animation:none!important}
 }
