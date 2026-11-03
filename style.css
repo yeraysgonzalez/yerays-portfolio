@@ -622,3 +622,7 @@ body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.85)}
 .utopia-case .utopia-end .utopia-script{font-size:95px!important}
 .utopia-card-visual .utopia-script{font-size:clamp(58px,7vw,95px)!important}
 @media(max-width:800px){.utopia-case .utopia-script{font-size:clamp(76px,17vw,120px)!important}}
+
+/* Utopia project cover: full-bleed portrait on Home and Work */
+.tile-visual.utopia-card-visual{padding:0!important;overflow:hidden!important;background:#09282b!important;display:block!important}
+.tile-visual.utopia-card-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%;max-width:none}
