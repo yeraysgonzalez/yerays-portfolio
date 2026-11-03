@@ -237,3 +237,11 @@ body.cursor-tracking,body.cursor-tracking a,body.cursor-tracking button{cursor:n
 .motion-caption{opacity:0;visibility:hidden;transform:translateY(65px);transition:none;will-change:opacity,transform}
 @media(max-width:800px){.motion-stage{height:220vh}}
 @media(prefers-reduced-motion:reduce){.motion-caption{opacity:1;visibility:visible;transform:none}}
+
+/* Static editorial hero; no CTA hover behavior */
+.home-intro .hero-cta-heading{cursor:inherit}
+.home-intro .hero-cta-heading:hover{color:var(--ink)}
+/* Video copy rises from beneath the viewport, fully opaque */
+.motion-caption{opacity:1;visibility:hidden;transform:translateY(100vh)}
+/* Approach statement: lime instead of muted gray */
+.statement .lede span{color:var(--accent)}
