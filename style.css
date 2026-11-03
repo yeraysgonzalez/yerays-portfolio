@@ -210,3 +210,15 @@ body:has(.cursor-tip.visible) .brand-cursor{opacity:0!important}
 @keyframes hero-arrow-bounce{0%,100%{transform:translateY(-4px)}50%{transform:translateY(7px)}}
 @media(max-width:800px){.home-intro{min-height:calc(100svh - 84px)}.home-intro .hero-cta-heading{font-size:clamp(68px,12vw,190px)}.hero-scroll-cue{padding-top:30px}}
 @media(prefers-reduced-motion:reduce){.hero-scroll-arrow{animation:none}.hero-cta,.hero-cta-arrow{transition:none}}
+
+/* Inverted hero CTA: footer-dark background only while hovering headline */
+.home-intro{z-index:0;transition:color .4s ease}
+.home-intro:before{content:'';position:absolute;z-index:-1;inset:0 calc((min(100vw - 7vw,1680px) - 100vw)/2);background:#1b1d1a;opacity:0;pointer-events:none;transition:opacity .45s ease}
+.home-intro:has(.hero-cta:hover):before,.home-intro:has(.hero-cta:focus-visible):before{opacity:1}
+.home-intro:has(.hero-cta:hover),.home-intro:has(.hero-cta:focus-visible){color:#f4f3ee}
+.home-intro:has(.hero-cta:hover) .hero-cta,.home-intro:has(.hero-cta:focus-visible) .hero-cta{color:var(--accent)}
+.hero-scroll-cue{animation:hero-cue-bounce 2s ease-in-out infinite}
+@keyframes hero-cue-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+@media(min-width:801px){.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-385px}}
+@media(max-width:800px){.home-intro:before{left:-20px;right:-20px}}
+@media(prefers-reduced-motion:reduce){.hero-scroll-cue{animation:none}.home-intro,.home-intro:before{transition:none}}
