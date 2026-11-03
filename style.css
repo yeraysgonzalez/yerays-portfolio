@@ -332,3 +332,10 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .hero-video-experiment .motion-frame video,.hero-video-experiment .motion-frame img{transform:none!important;width:100%;height:100%;object-fit:cover}
 .hero-video-experiment .hero-overlay{mix-blend-mode:difference}
 @media(prefers-reduced-motion:reduce){.hero-video-experiment .motion-frame{opacity:0!important;transform:none!important}}
+
+/* Two perfectly aligned, opaque hero text layers: black at rest, white only where the rising video covers it. */
+.hero-video-experiment .hero-overlay{mix-blend-mode:normal!important;color:var(--ink)!important;z-index:3}
+.hero-video-experiment .hero-overlay-white{color:#fff!important;z-index:4;clip-path:inset(var(--mask-top,100%) 0 0 0);pointer-events:none!important}
+.hero-video-experiment .hero-overlay-white .hero-summary,.hero-video-experiment .hero-overlay-white .eyebrow,.hero-video-experiment .hero-overlay-white .hero-scroll-cue{color:#fff!important}
+.hero-video-experiment .hero-overlay-white .hero-cta-heading,.hero-video-experiment .hero-overlay-white .hero-copy{color:#fff!important}
+@media(prefers-reduced-motion:reduce){.hero-video-experiment .hero-overlay-white{display:none}}
