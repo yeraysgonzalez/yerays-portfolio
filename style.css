@@ -245,3 +245,10 @@ body.cursor-tracking,body.cursor-tracking a,body.cursor-tracking button{cursor:n
 .motion-caption{opacity:1;visibility:hidden;transform:translateY(100vh)}
 /* Approach statement: lime instead of muted gray */
 .statement .lede span{color:var(--accent)}
+
+/* Adapt the branded cursor to dark video, approach and footer surfaces. */
+@media(pointer:fine) and (prefers-reduced-motion:no-preference){
+.brand-cursor{transition:opacity .12s ease,filter .18s ease}
+.brand-cursor.on-dark{filter:brightness(0) invert(1) drop-shadow(0 1px 1px #0005)}
+body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tracking) a,body.cursor-over-dark:not(.cursor-tracking) button{cursor:none!important}
+}
