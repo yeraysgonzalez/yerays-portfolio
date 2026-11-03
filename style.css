@@ -365,3 +365,17 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 /* Scrolled navigation: 95% lime, allowing underlying content to show through. */
 body>.container:first-child.nav-scrolled{background:rgba(217,246,110,.95)}
 @media(max-width:800px){body>.container:first-child.nav-scrolled .nav{background:rgba(217,246,110,.95)}}
+
+/* Mobile navigation: conventional three-line hamburger / close icon. */
+.menu-btn{align-items:center;justify-content:center;position:relative}
+.menu-btn .menu-icon{display:block;width:24px;height:18px;position:relative}
+.menu-btn .menu-icon i{display:block;position:absolute;left:0;width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease,top .25s ease,opacity .2s ease}
+.menu-btn .menu-icon i:nth-child(1){top:0}
+.menu-btn .menu-icon i:nth-child(2){top:8px}
+.menu-btn .menu-icon i:nth-child(3){top:16px}
+.menu-btn[aria-expanded="true"] .menu-icon i:nth-child(1){top:8px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] .menu-icon i:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] .menu-icon i:nth-child(3){top:8px;transform:rotate(-45deg)}
+@media(max-width:800px){.menu-btn{width:40px;height:40px;padding:8px;display:inline-flex}}
+/* Prevent iOS from substituting emoji artwork for directional arrows. */
+.arrow-text{font-family:'DM Sans',Arial,sans-serif;font-variant-emoji:text}
