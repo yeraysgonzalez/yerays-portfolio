@@ -305,3 +305,10 @@ body.cursor-over-dark:not(.cursor-tracking),body.cursor-over-dark:not(.cursor-tr
 .type-char{visibility:hidden}
 .type-char.typed{visibility:visible}
 @media(prefers-reduced-motion:reduce){.type-char{visibility:visible}}
+
+/* Typing spans must inherit headline typography and their own text color. */
+.section-line h2 .type-char{font-size:inherit;line-height:inherit;letter-spacing:inherit;font-weight:inherit}
+.statement .lede > span{color:var(--accent)}
+.statement .lede > .type-char{color:#f4f3ee}
+.statement .lede .type-char{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
+.statement .lede .weight-accent .type-char{font-weight:inherit}
