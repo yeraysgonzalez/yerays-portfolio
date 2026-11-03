@@ -137,3 +137,19 @@ body>.container:first-child.nav-scrolled .topbar{background:transparent;color:va
 body>.container:first-child.nav-scrolled .nav a,body>.container:first-child.nav-scrolled .menu-btn{color:var(--ink)}
 @media(max-width:800px){.section{padding-top:120px}.selected-work-section .feature-grid>.tile:nth-child(5){grid-column:1;margin-top:0}.services-home .service-row:before,.services-home .service-row:after{left:-20px;right:-20px}.services-home .service-list:before{left:-20px;width:100vw}body>.container:first-child.nav-scrolled .nav{background:var(--accent)}}
 @media(prefers-reduced-motion:reduce){.services-home .service-row:before,body>.container:first-child{transition:none!important}}
+
+/* Scroll-aware nav: hide downward, reveal lime upward, original cream at top */
+body>.container:first-child.nav-hidden{transform:translateY(-110%);transition:transform .42s cubic-bezier(.22,1,.36,1),background-color .45s ease}
+body>.container:first-child{transition:transform .42s cubic-bezier(.22,1,.36,1),background-color .45s ease}
+/* Dark case-study cursor stays visible on the lime project background */
+.cursor-tip{background:#181918;color:#fff}
+/* More balanced final three-card editorial arrangement */
+@media(min-width:801px){.selected-work-section .feature-grid>.tile:nth-child(3){margin-top:145px}.selected-work-section .feature-grid>.tile:nth-child(5){margin-top:-115px}}
+/* Five coordinated service hover tones, from lime to violet */
+.services-home .service-row:nth-child(1){--service-hover:#d9f66e}
+.services-home .service-row:nth-child(2){--service-hover:#b8e7a0}
+.services-home .service-row:nth-child(3){--service-hover:#a7cfbf}
+.services-home .service-row:nth-child(4){--service-hover:#b7b0dd}
+.services-home .service-row:nth-child(5){--service-hover:#a78be1}
+.services-home .service-row:before{background:var(--service-hover,var(--accent))}
+@media(prefers-reduced-motion:reduce){body>.container:first-child{transition:none!important}}
